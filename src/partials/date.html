@@ -1,0 +1,71 @@
+<div class="container filter-page" ng-controller="DateController">
+  <header class="page-header">
+    <h2 class="title">Date Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>date</code> filter in AngularJS formats a date object or a date string into a specified date format.
+      This is useful for displaying dates in a readable and localized format, such as "MM/dd/yyyy" or "fullDate".
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, you can enter a date into the input field. The <code>date</code> filter will format the date
+        according to the specified format string or a default format. This helps in displaying dates in different styles
+        and formats based on user or locale preferences.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>date</code> filter to format a date:
+          </p>
+          <p class="example-result">
+            Input Date: <span>{{ '2024-08-07' | date:'fullDate' }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Date Filter can be used to format date values:</p>
+        <div class="input-section">
+          <label for="dateInput" class="input-label">Date:</label>
+          <input type="date" id="dateInput" ng-model="dateInput" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Date: <span>{{ dateInput }}</span>
+          </p>
+          <p class="result-text">
+            Formatted Date: <span>{{ dateInput | date:'fullDate' }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Displaying event dates in a calendar application.</li>
+          <li>Formatting timestamps in logs or reports.</li>
+          <li>Presenting user-friendly dates on user interfaces, such as "Friday, August 7, 2024".</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>date</code> filter to handle different date formats and locales. For example:
+        </p>
+        <ul class="list">
+          <li><strong>Custom Date Formats:</strong> Use different format strings like "shortDate", "mediumDate", or
+            custom formats.</li>
+          <li><strong>Locale-Specific Formats:</strong> Display dates according to specific locale conventions.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter parameters and format strings in your AngularJS
+          controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

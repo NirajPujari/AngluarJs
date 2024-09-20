@@ -1,0 +1,77 @@
+<div class="container filter-page" ng-controller="LimitToController">
+  <header class="page-header">
+    <h2 class="title">LimitTo Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>limitTo</code> filter in AngularJS is used to limit the number of items displayed from an array or the
+      number of characters in a string. This is particularly useful for paginating data or truncating text.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an array of items and a string. The <code>limitTo</code> filter is applied to limit the
+        number of items displayed from the array and the number of characters displayed from the string. This helps in
+        controlling the display of data and making it more manageable for the user.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>limitTo</code> filter to limit items in an array:
+          </p>
+          <p class="example-result">
+            Items: <span>{{ items | limitTo:5 }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the LimitTo Filter can be used:</p>
+        <div class="input-section">
+          <label for="limitNumber" class="input-label">Limit:</label>
+          <input type="number" id="limitNumber" ng-model="limitNumber" placeholder="Enter limit" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Array: <span>{{ items }}</span>
+          </p>
+          <p class="result-text">
+            Limited Array: <span>{{ items | limitTo:limitNumber }}</span>
+          </p>
+          <p class="result-text">
+            Original String: <span>{{ longString }}</span>
+          </p>
+          <p class="result-text">
+            Limited String: <span>{{ longString | limitTo:limitNumber }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Displaying a subset of items in a list or table.</li>
+          <li>Truncating text for previews or summaries.</li>
+          <li>Implementing pagination by limiting the number of items shown per page.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>limitTo</code> filter to handle different limits for arrays and strings. For
+          example:
+        </p>
+        <ul class="list">
+          <li><strong>Dynamic Limits:</strong> Use a dynamic limit value based on user input or application state.</li>
+          <li><strong>Conditional Limits:</strong> Apply different limits based on certain conditions or user roles.
+          </li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter parameters in your AngularJS controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

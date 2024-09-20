@@ -1,0 +1,81 @@
+<div class="container filter-page" ng-controller="JsonController">
+  <header class="page-header">
+    <h2 class="title">JSON Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>json</code> filter in AngularJS formats an object or array into a JSON string. This is useful for
+      displaying data structures in a readable format or for debugging purposes.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, you can enter key-value pairs to add to a predefined object. The <code>json</code> filter will
+        convert this object into a formatted JSON string. This can be helpful for visualizing complex data structures or
+        for debugging data issues.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>json</code> filter to format an object:
+          </p>
+          <p class="example-result">
+            Input Data: <span>{{ { name: 'John', age: 30, city: 'New York' } | json }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below is an example of how the JSON Filter can be used to display and format JSON data.
+          You can add key-value pairs to a predefined object:</p>
+        <div class="input-section">
+          <label for="keyInput" class="input-label">Key:</label>
+          <input type="text" id="keyInput" ng-model="newKey" placeholder="Enter key" class="input-holder">
+        </div>
+        <div class="input-section">
+          <label for="valueInput" class="input-label">Value:</label>
+          <input type="text" id="valueInput" ng-model="newValue" placeholder="Enter value" class="input-holder">
+        </div>
+        <button ng-click="addKeyValue()">Add Key-Value Pair</button>
+        <button ng-click="removeKeyValue()">Remove Key-Value Pair</button>
+        <div class="result-section">
+          <p class="result-text">
+            Original Object: <span>{{ jsonObject }}</span>
+          </p>
+          <p class="result-text">
+            Formatted JSON: <span>{{ jsonObject | json }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Displaying structured data in a readable format.</li>
+          <li>Debugging and inspecting JSON data in development tools.</li>
+          <li>Visualizing complex data structures for educational or documentation purposes.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>json</code> filter to handle different formatting options, such as indentation
+          levels or data transformations. For example:
+        </p>
+        <ul class="list">
+          <li><strong>Indentation:</strong> Adjust the number of spaces used for indentation in the formatted JSON
+            string.</li>
+          <li><strong>Custom Formats:</strong> Implement custom filters to modify how JSON data is presented or
+            processed.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, you may need to adjust the JSON formatting logic in your AngularJS
+          controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<link rel="stylesheet" href="../css/json.css">

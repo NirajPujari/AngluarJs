@@ -1,0 +1,6 @@
+{
+	"watch": ["index.ts", "src"],
+	"ext": "js,json,html,css.ts",
+	"ignore": ["public/vendor/*"],
+	"delay": "250"
+}

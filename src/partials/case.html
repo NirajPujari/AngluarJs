@@ -1,0 +1,70 @@
+<div class="container filter-page" ng-controller="CaseController">
+  <header class="page-header">
+    <h2 class="title">Text Transformation Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>lowercase</code> and <code>uppercase</code> filters in AngularJS convert the characters in a string to
+      lowercase or uppercase, respectively. This can be useful for text normalization and formatting.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an input field where you can enter text. The <code>lowercase</code> filter converts
+        all characters in the string to lowercase, while the <code>uppercase</code> filter converts all characters to
+        uppercase. As you type, the displayed text is dynamically updated to show the transformed versions.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div>
+          <p class="example-description">
+            You can also use these filters in combination with other AngularJS features. For example, you might use
+            the <code>uppercase</code> filter to format user input before saving it to a database.
+          </p>
+          <p class="example-result">
+            Input Text: <span>{{ 'hello world' | uppercase }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Lowercase and Uppercase Filters can be used:</p>
+        <div class="input-section">
+          <label for="inputText" class="input-label">Input Text:</label>
+          <input type="text" id="inputText" ng-model="inputText" placeholder="Enter text" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Text: <span>{{ inputText }}</span>
+          </p>
+          <p class="result-text">
+            Lowercase Text: <span>{{ inputText | lowercase }}</span>
+          </p>
+          <p class="result-text">
+            Uppercase Text: <span>{{ inputText | uppercase }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Normalizing user input for case-insensitive comparisons.</li>
+          <li>Formatting names and titles in a consistent manner.</li>
+          <li>Transforming text for display in different languages or contexts.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can create custom filters based on the <code>lowercase</code> and <code>uppercase</code> filters. For
+          instance, you could create a filter that capitalizes the first letter of each word in a string.
+        </p>
+        <p class="description">
+          Custom Filter Example: <span>{{ 'hello world' | capitalize }}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+.use-cases .list,
+.customization .list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.use-cases .list li,
+.customization .list li {
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+
+button {
+  background-color: var(--highlight-color);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: var(--secondary-highlight-color);
+}

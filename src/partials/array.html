@@ -1,0 +1,72 @@
+<div class="container filter-page" ng-controller="ArrayController">
+  <header class="page-header">
+    <h2 class="title">Array Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>filter</code> filter in AngularJS is used to filter the elements of an array based on a specified
+      condition. It creates a new array with all elements that pass the test implemented by the provided function. This
+      is particularly useful for displaying subsets of data in your application.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an array of items. The <code>ng-repeat</code> directive iterates over this array and
+        displays each item in a list. The <code>filter</code> filter is then applied to the array, using the input from
+        the <code>searchText</code> model to filter the items. Only 10 items are displayed at a time with pagination
+        controls.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Examples:</h3>
+        <p class="example-description">
+          Here are a few more examples of how the <code>filter</code> filter can be used:
+        </p>
+        <ul class="example-list">
+          <li><strong>Example 1:</strong> Filtering an array of names based on a search query.</li>
+          <li><strong>Example 2:</strong> Filtering a list of numbers to show only even numbers.</li>
+          <li><strong>Example 3:</strong> Filtering a list of products based on their category.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below is an example of how the Array Filter can be used to display a filtered list of
+          items:</p>
+        <div class="input-section">
+          <label for="searchText" class="input-label">Search:</label>
+          <input type="text" id="searchText" ng-model="searchText" placeholder="Enter text to filter"
+            class="input-holder">
+        </div>
+        <ul class="item-list">
+          <li ng-repeat="item in items | filter:searchText | limitTo:10" class="item">{{ item }}</li>
+        </ul>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <p class="description">
+          The <code>filter</code> filter is particularly useful in scenarios where you need to:
+        </p>
+        <ul class="list">
+          <li>Search through large datasets to find specific items.</li>
+          <li>Display only items that meet certain criteria, such as in a shopping application.</li>
+          <li>Improve user experience by allowing dynamic filtering of lists and tables.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>filter</code> functionality to handle different filtering conditions. For example:
+        </p>
+        <ul class="list">
+          <li><strong>Case Insensitivity:</strong> Ensure that filtering is case-insensitive.</li>
+          <li><strong>Multiple Criteria:</strong> Filter based on multiple fields or criteria simultaneously.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter logic in your AngularJS controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<link rel="stylesheet" href="../css/array.css">

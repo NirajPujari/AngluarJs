@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-app="filterSearchApp" ng-controller="MainController">
+    <header class="header">
+        <div class="container">
+            <h1>AngularJS Filter Search</h1>
+            <p>A simple AngularJS application to search through a list of fruits with a load more feature.</p>
+        </div>
+    </header>
+    <section ng-view></section>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 Team 7. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<div class="container filter-page" ng-controller="CurrencyController">
+  <header class="page-header">
+    <h2 class="title">Currency Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>currency</code> filter in AngularJS formats a number as a currency value. This is useful for displaying
+      financial amounts in a standardized currency format, including the currency symbol, thousands separators, and
+      decimal points.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, you can enter a numeric value into the input field. The <code>currency</code> filter will
+        format the number into a currency string, including the currency symbol and appropriate decimal and thousand
+        separators based on the locale settings.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>currency</code> filter to format a number:
+          </p>
+          <p class="example-result">
+            Input Amount: <span>{{ 1234.56 | currency }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Currency Filter can be used to format monetary values:</p>
+        <div class="input-section">
+          <label for="amount" class="input-label">Amount:</label>
+          <input type="number" id="amount" ng-model="amount" placeholder="Enter amount" class="input-holder"
+            pattern="[0-9]*" required>
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Amount: <span>{{ amount }}</span>
+          </p>
+          <p class="result-text">
+            Formatted Amount: <span>{{ amount | currency }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Displaying prices and costs in an e-commerce application.</li>
+          <li>Formatting salary and expense reports in financial applications.</li>
+          <li>Presenting monetary values in user interfaces with proper currency symbols and formatting.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>currency</code> filter to handle different currency formats and symbols. For
+          example:
+        </p>
+        <ul class="list">
+          <li><strong>Custom Currency Symbol:</strong> Change the default currency symbol to a custom symbol or text.
+          </li>
+          <li><strong>Decimal Places:</strong> Adjust the number of decimal places displayed in the formatted currency
+            value.</li>
+          <li><strong>Locale-Specific Formatting:</strong> Apply formatting specific to different locales and
+            currencies.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter parameters in your AngularJS controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

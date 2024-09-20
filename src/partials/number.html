@@ -1,0 +1,72 @@
+<div class="container filter-page" ng-controller="NumberController">
+  <header class="page-header">
+    <h2 class="title">Number Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>number</code> filter in AngularJS formats a number as text. You can specify the number of decimal places
+      to display, making it useful for formatting numerical data for display in your application.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have a numerical value that is formatted using the <code>number</code> filter. You can
+        specify the number of decimal places to include, ensuring the number is displayed with the desired precision.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>number</code> filter to format a number:
+          </p>
+          <p class="example-result">
+            Original Number: <span>{{ 1234.56789 }}</span><br>
+            Formatted Number (2 decimal places): <span>{{ 1234.56789 | number:2 }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Number Filter can be used:</p>
+        <div class="input-section">
+          <label for="decimalPlaces" class="input-label">Decimal Places:</label>
+          <input type="number" id="decimalPlaces" ng-model="decimalPlaces" placeholder="Enter number of decimal places"
+            class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Number: <span>{{ number }}</span>
+          </p>
+          <p class="result-text">
+            Formatted Number: <span>{{ number | number:decimalPlaces }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Displaying currency values with a specific number of decimal places.</li>
+          <li>Formatting percentages with a desired precision.</li>
+          <li>Ensuring consistency in the display of numerical data in reports or tables.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>number</code> filter to handle different formats and precisions. For example:
+        </p>
+        <ul class="list">
+          <li><strong>Dynamic Precision:</strong> Adjust the number of decimal places based on user input or application
+            state.</li>
+          <li><strong>Conditional Formatting:</strong> Apply different formatting based on certain conditions or data
+            types.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter parameters in your AngularJS controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

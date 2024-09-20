@@ -1,0 +1,70 @@
+<div class="container filter-page" ng-controller="TruncateController">
+  <header class="page-header">
+    <h2 class="title">Truncate Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>truncate</code> filter in AngularJS truncates a string to a specified length and appends an ellipsis
+      (...) if the string is longer than the given length. This can be useful for limiting the display of text content
+      in UI elements.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an input field where you can enter text and specify the maximum length. The
+        <code>truncate</code> filter truncates the input string to the specified length and adds an ellipsis if
+        necessary.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>truncate</code> filter to limit the length of a string:
+          </p>
+          <p class="example-result">
+            Original Text: <span>{{ 'AngularJS is a structural framework for dynamic web apps.' }}</span><br>
+            Truncated Text: <span>{{ 'AngularJS is a structural framework for dynamic web apps.' | truncate:20 }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Truncate Filter can be used:</p>
+        <div class="input-section">
+          <label for="truncateLength" class="input-label">Truncate Length:</label>
+          <input type="number" id="truncateLength" ng-model="truncateLength" placeholder="Enter length"
+            class="input-holder">
+        </div>
+        <div class="input-section">
+          <label for="inputText" class="input-label">Input Text:</label>
+          <input type="text" id="inputText" ng-model="text" placeholder="Enter text" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Text: <span>{{ text }}</span>
+          </p>
+          <p class="result-text">
+            Truncated Text: <span>{{ text | truncate:truncateLength }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Limiting the display of long text content in UI components.</li>
+          <li>Creating previews or snippets of text in blog posts, comments, or product descriptions.</li>
+          <li>Ensuring that text fits within specified dimensions in a layout.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can adjust the <code>truncate</code> filter to include different ellipsis characters or handle special
+          cases, such as ensuring words are not cut off in the middle.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,73 @@
+<div class="container filter-page" ng-controller="OrderByController">
+  <header class="page-header">
+    <h2 class="title">OrderBy Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>orderBy</code> filter in AngularJS sorts an array of items based on a specified expression. It can sort
+      data in ascending or descending order and is useful for displaying ordered lists in your application.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an array of items that can be sorted using the <code>orderBy</code> filter. You can
+        specify the property by which to sort and the order (ascending or descending).
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>orderBy</code> filter to sort an array:
+          </p>
+          <p class="example-result">
+            Original Array: <span>{{ items }}</span><br>
+            Sorted Array (by name): <span>{{ items | orderBy:'name' }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the OrderBy Filter can be used:</p>
+        <div class="input-section">
+          <label for="sortBy" class="input-label">Sort By:</label>
+          <input type="text" id="sortBy" ng-model="sortBy" placeholder="Enter property to sort by" class="input-holder">
+        </div>
+        <div class="input-section">
+          <label for="reverseOrder" class="input-label">Reverse Order:</label>
+          <input type="checkbox" id="reverseOrder" ng-model="reverseOrder" class="input-checkbox">
+          <label for="reverseOrder">Sort in Descending Order</label>
+        </div>
+        <div class="result-section">
+          <ul class="item-list">
+            <li ng-repeat="item in items | orderBy:sortBy:reverseOrder" class="item">{{ item.name }} - {{ item.value }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Sorting lists of items by a specific property, such as names or prices.</li>
+          <li>Displaying data in a user-friendly order, such as sorting a list of products by popularity.</li>
+          <li>Improving data presentation in tables or lists by allowing dynamic sorting.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can customize the <code>orderBy</code> filter to handle different sorting requirements. For example:
+        </p>
+        <ul class="list">
+          <li><strong>Dynamic Sorting:</strong> Allow users to select multiple properties to sort by.</li>
+          <li><strong>Custom Sort Functions:</strong> Implement custom sorting logic by providing a function.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter parameters or sorting logic in your AngularJS controller
+          or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

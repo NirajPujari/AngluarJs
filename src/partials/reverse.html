@@ -1,0 +1,64 @@
+<div class="container filter-page" ng-controller="ReverseController">
+  <header class="page-header">
+    <h2 class="title">Reverse Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>reverse</code> filter in AngularJS reverses the characters in a string. This can be useful for various
+      text transformations and effects in your application.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, we have an input field where you can enter text. The <code>reverse</code> filter reverses the
+        characters in the input string. As you type, the displayed text is dynamically updated to show the reversed
+        version.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>reverse</code> filter to reverse a string:
+          </p>
+          <p class="example-result">
+            Original Text: <span>{{ 'AngularJS' }}</span><br>
+            Reversed Text: <span>{{ 'AngularJS' | reverse }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Reverse Filter can be used:</p>
+        <div class="input-section">
+          <label for="inputText" class="input-label">Input Text:</label>
+          <input type="text" id="inputText" ng-model="text" placeholder="Enter text" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Text: <span>{{ text }}</span>
+          </p>
+          <p class="result-text">
+            Reversed Text: <span>{{ text | reverse }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Creating reversed text effects for user interface elements.</li>
+          <li>Transforming strings for encryption or data manipulation.</li>
+          <li>Displaying reversed text as part of a fun or creative feature.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can extend the <code>reverse</code> filter to handle more complex string transformations or formatting
+          needs.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,19 @@
+/* Additional Styles for Array Filter Page */
+.example-list {
+  list-style: none;
+  padding: 0;
+}
+
+.example-list li {
+  padding: 5px 0;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-list .item {
+  padding: 10px;
+  border-bottom: 1px solid var(--item-border-color);
+}

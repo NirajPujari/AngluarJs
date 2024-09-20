@@ -1,0 +1,70 @@
+<div class="container filter-page" ng-controller="CapitalizeController">
+  <header class="page-header">
+    <h2 class="title">Capitalize Filter</h2>
+  </header>
+  <section class="content">
+    <p class="description">
+      The <code>capitalize</code> filter in AngularJS capitalizes the first letter of each word in a string. This can be
+      useful for text formatting and ensuring that titles or names are properly capitalized.
+    </p>
+    <div class="explanation">
+      <h3 class="explanation-title">Explanation:</h3>
+      <p class="explanation-description">
+        In this example, you can enter a text string into the input field. The <code>capitalize</code> filter will
+        convert the first letter of each word in the string to uppercase. This can help in formatting names, titles, or
+        any text where proper capitalization is needed.
+      </p>
+      <div class="example-section">
+        <h3 class="example-title">Additional Example:</h3>
+        <div class="example-section">
+          <p class="example-description">
+            Here’s how you can use the <code>capitalize</code> filter in practice:
+          </p>
+          <p class="example-result">
+            Input Text: <span>{{ 'hello world' | capitalize }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="example-usage">
+        <h3 class="title">Example Usage:</h3>
+        <p class="description">Below are examples of how the Capitalize Filter can be used to format text:</p>
+        <div class="input-section">
+          <label for="inputText" class="input-label">Input Text:</label>
+          <input type="text" id="inputText" ng-model="inputText" placeholder="Enter text" class="input-holder">
+        </div>
+        <div class="result-section">
+          <p class="result-text">
+            Original Text: <span>{{ inputText }}</span>
+          </p>
+          <p class="result-text">
+            Capitalized Text: <span>{{ inputText | capitalize }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="use-cases">
+        <h3 class="title">Use Cases:</h3>
+        <ul class="list">
+          <li>Formatting names and titles to ensure proper capitalization.</li>
+          <li>Displaying headings and labels with correct capitalization in UI.</li>
+          <li>Improving readability and presentation of text in web applications.</li>
+        </ul>
+      </div>
+      <div class="customization">
+        <h3 class="title">Customization:</h3>
+        <p class="description">
+          You can extend the <code>capitalize</code> filter to handle different text formats or capitalization rules.
+          For example:
+        </p>
+        <ul class="list">
+          <li><strong>Title Case:</strong> Capitalize the first letter of each word in a title.</li>
+          <li><strong>Sentence Case:</strong> Capitalize only the first letter of the first word in a sentence.</li>
+        </ul>
+        <p class="description">
+          To implement these customizations, adjust the filter logic in your AngularJS controller or service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
